@@ -1,5 +1,6 @@
 from pathlib import Path
-import numpy as np, pandas as pd
+import numpy as np
+import pandas as pd
 rng=np.random.default_rng(2026)
 date=pd.date_range("2005-01-01","2025-12-01",freq="MS")
 t=np.arange(len(date)); oni=0.8*np.sin(2*np.pi*t/48)+rng.normal(0,.25,len(t))

@@ -115,7 +115,7 @@ def write_outputs(records: list[dict[str, Any]], root: Path, queries: list[str])
         writer.writeheader(); writer.writerows(records)
     lines = ["# Lista corta de literatura SARIMAX", "", f"Generada: {stamp}", "", "## Consultas", *[f"- {q}" for q in queries], "", "## Resultados"]
     for r in sorted(records, key=lambda x: (x.get("cited_by") or 0), reverse=True)[:20]:
-        lines += ["", f"### {r.get('title','Sin título')}", f"- Año: {r.get('year')}", f"- Fuente: {r.get('venue') or r.get('source')}", f"- DOI: {r.get('doi') or 'No identificado'}", f"- Estado: metadata_only; requiere validación de texto completo"]
+        lines += ["", f"### {r.get('title','Sin título')}", f"- Año: {r.get('year')}", f"- Fuente: {r.get('venue') or r.get('source')}", f"- DOI: {r.get('doi') or 'No identificado'}", "- Estado: metadata_only; requiere validación de texto completo"]
     (lit_dir / "shortlist.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
