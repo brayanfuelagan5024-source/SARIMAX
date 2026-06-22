@@ -1,4 +1,4 @@
-# Estructura de articulo academico: SARIMAX aplicado a inflacion en Ecuador
+# SARIMAX aplicado a inflacion en Ecuador
 
 ## 1. Resumen
 
